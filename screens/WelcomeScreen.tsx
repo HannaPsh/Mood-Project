@@ -7,7 +7,7 @@ const WelcomeScreen=({ navigation })=> {
   const user = useSelector(state => state.isLoggedIn) 
   return (
     <ImageBackground
-      source={require("../assets/imageBackground.webp")}
+      source={require("../assets/waveBlue.png")}
       style={{
         width: "100%",
         height: "100%",
@@ -18,7 +18,7 @@ const WelcomeScreen=({ navigation })=> {
     >
       <View style={{ alignItems: "center", position: "absolute", top: 70 }}>
         <Image
-          source={require("../assets/icon.png")}
+          source={require("../assets/Emotions.png")}
           style={{
             width: 100,
             height: 100,
@@ -28,17 +28,18 @@ const WelcomeScreen=({ navigation })=> {
         <Text>Smth you want to say</Text>
       </View>
       <Text />
-
+<View style={{position:"absolute", bottom:40}}>
       <PressableButton
         title="Login"
         onPress={() => navigation.navigate('Login')}
-        color={colors.primary}
+        color={
+          "#276ecf"}
       />
       <PressableButton
         title="Register"
         onPress={() => navigation.navigate('Register')}
-        color={colors.secondary}
-      />
+        color={"#85bcf4"}
+      /></View>
     </ImageBackground>
   );
 }

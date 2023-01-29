@@ -3,16 +3,19 @@ import React, { FC } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import NewListingButton from "../Components/NewListingButton/NewListingButton";
-
-import WelcomeScreen from "../screens/WelcomeScreen";
 import ProfileScreen from "../screens/ProfileScreen/Profile";
-import TableScreen from "../screens/TableScreen";
+import TableScreen from "../screens/TableScreen/TableScreen";
 import StatisticsScreen from "../screens/StatisticsScreen";
+import headerOptions from "./HeaderOptions";
+
 
 const Tab = createBottomTabNavigator();
 
 const AppNavigator: FC = () => (
-  <Tab.Navigator initialRouteName="Profile" >
+  <Tab.Navigator
+  initialRouteName="Profile"
+  screenOptions={props => ({ ...headerOptions(props) })}
+>
     <Tab.Screen name="Table" component={TableScreen}  options={({ navigation }) => ({
         tabBarIcon: ({ color, size }) => (
           <MaterialCommunityIcons
