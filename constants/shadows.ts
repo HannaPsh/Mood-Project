@@ -24,9 +24,30 @@ const lightShadow = Platform.select({
   ios: iosLightShadow,
   android: androidLightShadow ,
 })
+const androidDarkShadow = {
+  shadowColor: colors.primary,
+  'shadow-offset': shadowOffset,
+  shadowOpacity: 0.25,
+  elevation: 5,
+  shadowRadius: 4,
+}
+
+const iosDarkShadow = {
+    shadowColor: colors.primary,
+    'shadow-offset': shadowOffset,
+    shadowOpacity: 0.25,
+    elevation: 5,
+    shadowRadius: 4,
+}
+
+const darkShadow = Platform.select({
+  ios: iosLightShadow,
+  android: androidLightShadow ,
+})
 
 
 
 export default {
   lightShadow,
+  darkShadow
 }
