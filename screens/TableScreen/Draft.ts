@@ -31,3 +31,114 @@ const DATA = [
   <S.CategoryContainer><S.Category>{title}</S.Category></S.CategoryContainer>  
   )}
 /> */
+
+
+
+/*                                            Modal                                        */
+
+/*          <Modal
+        animationType="fade"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}>
+        <S.CenteredView>
+          <S.ModalView>
+          <S.CloseModal
+              onPress={() => setModalVisible(!modalVisible)}>
+               <MaterialCommunityIcons
+            name="close"
+            color={colors.primary}
+            size={20}
+          />
+            </S.CloseModal>
+            <S.Title>{modalContent?.emotion.toLocaleUpperCase()}</S.Title>
+          
+            
+            <S.Description>{modalContent?.description}</S.Description>
+            <Pressable style={{alignSelf:"flex-end"}} onPress={()=>console.log("see more pressed")}><Text style={{color:colors.secondary}}>Read more</Text></Pressable>
+         <View style={{flexDirection:"row", width:"100%",justifyContent:"space-between"}}><Text style={{alignSelf:"center"}}>Feeling like this today? Add this</Text>
+           <Pressable onPress={ ()=>dispatch(addEmotion("new emotion"))}><MaterialCommunityIcons
+            name="plus-circle"
+            color={colors.primary}
+            size={40}
+          /></Pressable></View> 
+       
+          </S.ModalView>
+        </S.CenteredView>
+      </Modal> */
+
+
+
+
+
+      /* 
+      
+      const history = [
+  {
+    date: ISODate("2023-01-01T00:00:00Z"),
+    anger: [],
+    love: [],
+    sadness: [],
+    fear:[],
+    happiness:[]
+  },
+   {
+    date: ISODate("2023-01-01T00:00:00Z"),
+    anger: [],
+    love: [],
+    sadness: [],
+    fear:[],
+    happiness:[]
+  }
+   {
+    date: ISODate("2023-01-01T00:00:00Z"),
+    anger: string[],
+    love: string[],
+    sadness: string[],
+    fear: string[],
+    happiness:string[]
+  }
+
+type History = {
+  date: Date,
+    anger: string[],
+    love: string[],
+    sadness: string[],
+    fear: string[],
+    happiness:string[]
+}
+
+type User = {
+userName:string,
+email:string,
+password:string,
+lang:string,
+history:History[]
+
+
+  }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      */

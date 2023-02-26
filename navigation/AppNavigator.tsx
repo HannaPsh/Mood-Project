@@ -7,6 +7,7 @@ import ProfileScreen from "../screens/ProfileScreen/Profile";
 import TableScreen from "../screens/TableScreen/TableScreen";
 import StatisticsScreen from "../screens/StatisticsScreen";
 import headerOptions from "./HeaderOptions";
+import EmotionsListNavigator from "./EmotionsList";
 
 
 const Tab = createBottomTabNavigator();
@@ -16,7 +17,7 @@ const AppNavigator: FC = () => (
   initialRouteName="Profile"
   screenOptions={props => ({ ...headerOptions(props) })}
 >
-    <Tab.Screen name="Table" component={TableScreen}  options={({ navigation }) => ({
+    <Tab.Screen name="Table" component={EmotionsListNavigator}  options={({ navigation }) => ({
         tabBarIcon: ({ color, size }) => (
           <MaterialCommunityIcons
             name="table"

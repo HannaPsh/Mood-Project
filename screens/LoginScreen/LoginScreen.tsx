@@ -8,7 +8,7 @@ type Props = {onPress(): void };
 const LoginScreen: FC<Props> = ({onPress}) => {
     const [name, setName] = useState('hanna')
   const [email, setEmail] = useState('psh')
-  const user = useSelector(state => state.isLoggedIn) 
+  const user = useSelector(state => state) 
   const dispatch = useDispatch();
 console.log(user)
   const signin = ( )=> {

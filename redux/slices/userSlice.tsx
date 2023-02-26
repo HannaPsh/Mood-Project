@@ -1,20 +1,31 @@
 import { createSlice } from "@reduxjs/toolkit";
+import {User,Emotion} from '../../constants/types'
 
-type User = {
+/* type User = {
   name:string
   email:string
   emotions:string[]
   
-}
+} */
 
-interface UserState {
+/* interface UserState {
   user: User;
   isLoggedIn: boolean;
 }
-
-const initialState: UserState = {
-  user: {name:"", email:"", emotions:[]},
+ */
+const initialState: User = {
+  id:1,
+  userName:"",
+  email:"",
+  password:"",
+  lang:"en",
   isLoggedIn: false,
+  history:[{ date: new Date(Date.now()),
+    anger:[],
+    love: [],
+    sadness:[],
+    fear:[],
+    happiness:[]},]
   
 }
 
@@ -23,18 +34,29 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     signIn: (state, action) => {
-      state.user = {...state.user, ...action.payload}
-      state.isLoggedIn = true
+     ;
+  state.isLoggedIn = true;
+      
     },
     signOut: (state) => {
-      state.user = {...state.user}
-      state.isLoggedIn = false
+      state.isLoggedIn = false;
     },
-    addEmotion: (state,action) => {
-      state.user.emotions.push(action.payload);
-    }
+    addAnger: (state, action) => {
+      /* const { emotion } = action.payload; */
+     
+      const lastEmotion = state.history[state.history.length - 1];
+      /* if(lastEmotion.date===new Date(Date.now())) */
+      lastEmotion.anger.push(action.payload);
+    },
+    cleanStore: () => {
+  return { ...initialState };
+},
+    
+   /*  addEmotion: (state,action) => {
+      state.emotions.push(action.payload);
+    } */
   }
 })
 
-export const {signIn, signOut,addEmotion} = userSlice.actions
+export const {signIn, signOut,addAnger,cleanStore/* ,addEmotion */} = userSlice.actions
 export default userSlice.reducer

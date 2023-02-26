@@ -37,7 +37,7 @@ const Category: FC<Props> = ({categoryName,onPress,color,source}) => {
     borderRadius:10,
       }} >
 
-<Image style={{width:70, height:70}} source= {source}/>
+<Image style={{width:  70, height:70}} source= {source}/>
         <Text style={{color:"black",textAlign:"center"}}>{categoryName}</Text>
         
      
