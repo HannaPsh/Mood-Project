@@ -18,12 +18,12 @@ const Categories=[{id:"1",name:"Anger",color:"yellow",source:require("../../asse
     imageStyle={{resizeMode: 'cover'}}
    
   > */}{BackgroundAnimation()}
-<S.MainContentContainer><S.Text>Overview</S.Text>
+<S.MainContentContainer>{/* <S.Text>Overview</S.Text> */}
 <View style={{width:"100%",height:100, borderStyle:"solid",
-        borderWidth:3,borderColor:"white",borderRadius:70}}></View>
-        <Text>Today's log:</Text>
+        borderWidth:3,borderColor:"white",borderRadius:100, backgroundColor:colors.light}}></View>
+        {/* <Text>Today's log:</Text> */}
 <FlatList
-contentContainerStyle={{alignItems:"center"}}
+contentContainerStyle={{alignItems:"center", marginTop:50}}
 numColumns={3}
         data={Categories}
         renderItem={({item}) => <Category  onPress={()=>console.log("Category Pressed")} categoryName={item.name} color={item.color} source={item.source} />}

@@ -28,13 +28,16 @@ const Category: FC<Props> = ({categoryName,onPress,color,source}) => {
         justifyContent:"center",
         alignItems:"center",
     borderColor:"white",
+    backgroundColor:colors.light,
     height:100,
-    margin:20,
+    marginRight:15,
+    marginLeft:20,
+    marginTop:20,
     width:100,
     borderRadius:10,
       }} >
 
-<Image style={{width:60, height:60}} source= {source}/>
+<Image style={{width:70, height:70}} source= {source}/>
         <Text style={{color:"black",textAlign:"center"}}>{categoryName}</Text>
         
      

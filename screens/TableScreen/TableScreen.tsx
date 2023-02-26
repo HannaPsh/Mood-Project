@@ -7,6 +7,7 @@ import * as S from "./styled"
 import { addEmotion } from "../../redux/slices/userSlice";
 import Item from "./components/Item";
 import Title from "./components/Title";
+import BackgroundAnimation from "../../Components/AnimationBAckground/Animation";
 
 type Props = {onPress(): void };
 type Content = {emotion:string,description:string };
@@ -38,14 +39,7 @@ return (
     <View  style={{
         flex:1,
       }} >
-            <Image   source={require("../../assets/Brain2.png")}
-        style={{
-          width: "100%",
-          height: 50,
-          alignSelf:"flex-start",
-          
-        
-        }}/>
+          {BackgroundAnimation()}
          <Modal
         animationType="fade"
         transparent={true}
@@ -99,14 +93,14 @@ return (
         renderItem={({item}) => <Item item={item.emotion} onPress={()=>handleOnPress(item.emotion, item.description)} />}
         keyExtractor={item => item.emotion}
       /></ScrollView>
-      <Image   source={require("../../assets/Brain2.png")}
+     {/*  <Image   source={require("../../assets/Brain2.png")}
         style={{
           width: "100%",
           height: 50,
           alignSelf:"flex-start",
           
         
-        }}/>
+        }}/> */}
       </View>
   );
 };

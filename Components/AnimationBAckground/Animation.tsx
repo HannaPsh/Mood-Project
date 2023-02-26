@@ -53,7 +53,7 @@ export default function BackgroundAnimation() {
                     },
                   ],
             }]}
-           source={require("../../assets/animated2.png")} />
+           source={require("../../assets/sun.png")} />
         
   )
 }

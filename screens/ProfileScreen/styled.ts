@@ -17,7 +17,7 @@ export const Text = styled.Text`
 export const MainContentContainer = styled.View`
 align-self:"center";
 border-radius:30;
-background-color:${colors.light};
+/* background-color:${colors.light}; */
 margin:auto;
 /* border:1px solid ${colors.primary}; */
 height:500;
