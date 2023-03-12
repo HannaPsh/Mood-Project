@@ -142,3 +142,33 @@ history:History[]
       
       
       */
+
+
+  /* const currentMonth = moment().month(); // get current month (returns 2 for March since months are zero-indexed)
+  const monthStart = moment().month(currentMonth).startOf('month'); // set start of month
+  const monthEnd = moment().month(currentMonth).endOf('month'); // set end of month
+  
+  const calendar = []; // array to hold calendar data
+  
+  let currentDay = monthStart.clone(); // start at the beginning of the month
+  
+  // loop through each week of the month
+  while (currentDay.isBefore(monthEnd)) {
+    const week = [];
+  
+    // loop through each day of the week
+    for (let i = 0; i < 7; i++) {
+      week.push({
+        date: currentDay.clone(),
+        number: currentDay.date(),
+        isCurrentMonth: currentDay.month() === currentMonth
+      });
+  
+      currentDay.add(1, 'day'); // move to the next day
+    }
+  
+    calendar.push(week); // add week to calendar
+  }
+  
+  console.log(calendar); // output the calendar data
+   */
